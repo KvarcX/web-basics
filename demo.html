@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Демо — NeuralHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/demo-page.css">
+</head>
+<body>
+  <!-- === ЛР 9: Псевдоклассы и анимации (demo page) === -->
+
+  <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.svg" alt="NeuralHub" class="logo__img" width="40" height="40">
+        <span class="logo__text">NeuralHub</span>
+      </a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+      <label for="menu-toggle" class="menu-toggle-label" aria-label="Открыть меню">
+        <span class="hamburger"></span>
+      </label>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li>
+          <li class="nav__item"><a href="index.html#technologies" class="nav__link">Технологии</a></li>
+          <li class="nav__item"><a href="index.html#services" class="nav__link">Услуги</a></li>
+          <li class="nav__item"><a href="grid.html" class="nav__link">Grid</a></li>
+          <li class="nav__item"><a href="form.html" class="nav__link">Форма</a></li>
+          <li class="nav__item"><a href="demo.html" class="nav__link" aria-current="page">Демо</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Flip Card -->
+    <section class="section">
+      <div class="container">
+        <h1 class="section__title">CSS Демонстрации</h1>
+        <p class="section__subtitle">Примеры переходов, трансформаций и анимаций</p>
+
+        <h2 class="demo-section-title">Двусторонняя карта</h2>
+        <p class="demo-description">Наведите курсор на карту, чтобы увидеть обратную сторону</p>
+
+        <div class="flip-cards">
+          <div class="flip-card">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+                  <circle cx="32" cy="32" r="28" fill="none" stroke="#3b82f6" stroke-width="2"/>
+                  <circle cx="32" cy="24" r="8" fill="#3b82f6" opacity="0.6"/>
+                  <circle cx="20" cy="40" r="6" fill="#60a5fa" opacity="0.6"/>
+                  <circle cx="44" cy="40" r="6" fill="#8b5cf6" opacity="0.6"/>
+                  <line x1="32" y1="32" x2="20" y2="34" stroke="#3b82f6" stroke-width="1"/>
+                  <line x1="32" y1="32" x2="44" y2="34" stroke="#8b5cf6" stroke-width="1"/>
+                </svg>
+                <h3>Нейронные сети</h3>
+                <p>Основа современного AI</p>
+              </div>
+              <div class="flip-card__back">
+                <h3>Deep Learning</h3>
+                <p>Многослойные нейронные сети способны обучаться на больших объёмах данных и находить сложные паттерны для решения задач классификации, генерации и прогнозирования.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+                  <rect x="8" y="8" width="48" height="48" rx="8" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+                  <circle cx="32" cy="32" r="12" fill="#8b5cf6" opacity="0.3"/>
+                  <path d="M24 32 L30 26 L40 36 L44 30" stroke="#8b5cf6" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+                <h3>Компьютерное зрение</h3>
+                <p>Распознавание образов</p>
+              </div>
+              <div class="flip-card__back">
+                <h3>Computer Vision</h3>
+                <p>Технологии компьютерного зрения позволяют машинам интерпретировать визуальную информацию: распознавать лица, объекты, сцены и даже эмоции.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card">
+            <div class="flip-card__inner">
+              <div class="flip-card__front">
+                <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+                  <rect x="12" y="16" width="40" height="32" rx="4" fill="none" stroke="#60a5fa" stroke-width="2"/>
+                  <line x1="20" y1="28" x2="36" y2="28" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="20" y1="36" x2="44" y2="36" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h3>Обработка языка</h3>
+                <p>NLP технологии</p>
+              </div>
+              <div class="flip-card__back">
+                <h3>NLP</h3>
+                <p>Обработка естественного языка позволяет компьютерам понимать, анализировать и генерировать человеческий текст. От чат-ботов до машинного перевода.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infinite Marquee -->
+    <section class="section">
+      <div class="container">
+        <h2 class="demo-section-title">Бесконечная бегущая строка</h2>
+        <p class="demo-description">Автоматическая прокрутка технологий AI/ML</p>
+      </div>
+      <div class="marquee" aria-label="Бегущая строка с технологиями">
+        <div class="marquee__track">
+          <div class="marquee__content">
+            <span class="marquee__item">TensorFlow</span>
+            <span class="marquee__item">PyTorch</span>
+            <span class="marquee__item">Keras</span>
+            <span class="marquee__item">Scikit-learn</span>
+            <span class="marquee__item">OpenCV</span>
+            <span class="marquee__item">Hugging Face</span>
+            <span class="marquee__item">ONNX</span>
+            <span class="marquee__item">JAX</span>
+            <span class="marquee__item">MLflow</span>
+            <span class="marquee__item">Kubernetes</span>
+          </div>
+          <!-- Duplicate for seamless loop -->
+          <div class="marquee__content" aria-hidden="true">
+            <span class="marquee__item">TensorFlow</span>
+            <span class="marquee__item">PyTorch</span>
+            <span class="marquee__item">Keras</span>
+            <span class="marquee__item">Scikit-learn</span>
+            <span class="marquee__item">OpenCV</span>
+            <span class="marquee__item">Hugging Face</span>
+            <span class="marquee__item">ONNX</span>
+            <span class="marquee__item">JAX</span>
+            <span class="marquee__item">MLflow</span>
+            <span class="marquee__item">Kubernetes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="logo footer__logo">
+          <img src="images/logo.svg" alt="NeuralHub" class="logo__img" width="32" height="32">
+          <span class="logo__text">NeuralHub</span>
+        </a>
+        <p class="footer__description">Интеллектуальные решения для бизнеса будущего</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <h3 class="footer__heading">Навигация</h3>
+        <ul class="footer__list">
+          <li><a href="index.html" class="footer__link">Главная</a></li>
+          <li><a href="grid.html" class="footer__link">Grid</a></li>
+          <li><a href="form.html" class="footer__link">Форма</a></li>
+          <li><a href="demo.html" class="footer__link">Демо</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contacts">
+        <h3 class="footer__heading">Контакты</h3>
+        <address class="footer__address">
+          <p><a href="mailto:info@neuralhub.ru" class="footer__link">info@neuralhub.ru</a></p>
+          <p><a href="tel:+74951234567" class="footer__link">+7 (495) 123-45-67</a></p>
+        </address>
+      </div>
+      <hr class="footer__divider">
+      <p class="footer__copyright">&copy; 2025 NeuralHub. Все права защищены.</p>
+    </div>
+  </footer>
+</body>
+</html>
