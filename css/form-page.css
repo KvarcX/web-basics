@@ -1,0 +1,198 @@
+/* === ЛР 8: Form Page Styles === */
+/* === ЛР 9: Pseudo-classes & animations === */
+
+/* -- Registration form -- */
+.reg-form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.reg-form .form-group {
+  margin-bottom: 3.2rem;
+}
+
+/* -- Radio group -- */
+.radio-group {
+  display: flex;
+  gap: 2.4rem;
+  flex-wrap: wrap;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radius-md);
+  transition: background-color 0.3s ease;
+}
+
+.radio-label:hover {
+  background-color: var(--color-bg);
+}
+
+.radio-text {
+  transition: all 0.3s ease;
+}
+
+/* ЛР 9: Checked radio text styling */
+input[type="radio"]:checked + .radio-text {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* -- Form note -- */
+.form-note {
+  font-size: 1.4rem;
+  color: var(--color-text-light);
+  margin-bottom: 2.4rem;
+}
+
+/* -- Form actions -- */
+.form-actions {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+/* -- ЛР 9: Pseudo-elements form -- */
+.pseudo-form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.pseudo-form .form-group {
+  margin-bottom: 2.4rem;
+}
+
+/* Definitions list */
+.definitions {
+  padding: 1.6rem 0;
+}
+
+.definitions dt {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--color-heading);
+  margin-bottom: 0.8rem;
+  margin-top: 2rem;
+}
+
+/* ЛР 9: First-letter (буквица) for dt */
+.definitions dt::first-letter {
+  font-size: 2.6rem;
+  color: var(--color-accent);
+}
+
+.definitions dt:first-of-type {
+  margin-top: 0;
+}
+
+.definitions dd {
+  color: var(--color-text-light);
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  line-height: 1.6;
+}
+
+/* ЛР 9: Pseudo-element info symbol for dd */
+.definitions dd::before {
+  content: "\1F6C8 ";
+  margin-right: 0.4rem;
+}
+
+/* -- Checkbox lists -- */
+.checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.checkbox-label:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-bg);
+}
+
+.checkbox-text {
+  font-family: 'Courier New', monospace;
+  transition: all 0.3s ease;
+}
+
+/* ЛР 9: Checked checkbox - strike through */
+input[type="checkbox"]:checked + .checkbox-text {
+  text-decoration: line-through;
+  color: var(--color-accent);
+}
+
+/* ЛР 9: Even/odd styling for pseudo-element list */
+.checkbox-list--pseudo-elements .checkbox-label:nth-child(even) {
+  background-color: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+/* ЛР 9: Odd styling for pseudo-class list */
+.checkbox-list--pseudo-classes .checkbox-label:nth-child(odd) {
+  background-color: rgba(139, 92, 246, 0.05);
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+/* ЛР 9: Required field styling */
+input:required {
+  border-left: 3px solid var(--color-accent);
+}
+
+/* ЛР 9: Focus label highlighting */
+.form-field:focus-within label {
+  color: var(--color-accent);
+}
+
+/* ЛР 9: Footer logo transform */
+.footer__logo-img {
+  transition: transform 0.5s ease;
+  transform: rotate(30deg) scale(1.5) skew(5deg, 5deg);
+}
+
+/* -- Sticky footer -- */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* -- Responsive -- */
+@media (max-width: 480px) {
+  .radio-group {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .checkbox-list {
+    flex-direction: column;
+  }
+}
